@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ship2 : MonoBehaviour
 {
-    public Transform player;
+    private Transform player;
 
     public Aim aim;
 
@@ -16,6 +16,11 @@ public class Ship2 : MonoBehaviour
 
     public float detectionRadius = 6f;
 
+    private void Start()
+    {
+        //player = GetComponent<Transform>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
 
 
     void Update()

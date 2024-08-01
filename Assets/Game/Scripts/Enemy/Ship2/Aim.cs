@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class Aim : MonoBehaviour
 {
-    public Transform player;
+    private Transform player;
     public Transform ship; 
-    public float rotationSpeed = 5f; 
+    public float rotationSpeed = 5f;
 
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
     void Update()
     {
         shipAim();

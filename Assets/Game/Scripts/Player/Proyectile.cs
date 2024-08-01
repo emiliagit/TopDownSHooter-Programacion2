@@ -5,6 +5,7 @@ using UnityEngine;
 public class Proyectile : MonoBehaviour
 {
     public float speed = 15f;
+    public GameObject firePrefab;
 
     void Start()
     {
@@ -15,14 +16,18 @@ public class Proyectile : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //if (collision.gameObject.TryGetComponent(out EnemyLife enemy))
-        //{
-        //    enemy.LoseHealth(1);
-        //    Destroy(gameObject);
-        //}
-        //else if (collision.gameObject.CompareTag("Terrain"))
-        //{
-        //    Destroy(gameObject);
-        //}
+        if (collision.gameObject.TryGetComponent(out HealthEnemies enemy))
+        {
+            GameObject fire = Instantiate(firePrefab, transform.position, Quaternion.identity);
+            Destroy(fire, 1f);
+            enemy.TakeDamage(1);
+            Destroy(gameObject);
+        }
+        else if (collision.gameObject.CompareTag("Terrain"))
+        {
+            GameObject fire = Instantiate(firePrefab, transform.position, Quaternion.identity);
+            Destroy(fire, 1f);
+            Destroy(gameObject);
+        }
     }
 }

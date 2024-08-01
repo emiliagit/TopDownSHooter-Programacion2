@@ -10,6 +10,8 @@ public class Helath : MonoBehaviour
 
     public float hp;
 
+    public Timer temporizador;
+
     private void Start()
     {
         hp = 100;
@@ -24,7 +26,12 @@ public class Helath : MonoBehaviour
             SceneManager.LoadScene("GameOver");
 
         }
-        
+
+        if (hp > 0 && temporizador.restante < 1)
+        {
+            SceneManager.LoadScene("Victory");
+        }
+
         UpdateHealthUI();
 
     }

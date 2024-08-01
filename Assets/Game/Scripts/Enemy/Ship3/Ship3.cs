@@ -15,10 +15,7 @@ public class Ship3 : MonoBehaviour
 
     public float hp;
 
-    public Transform player;
-
-
-    private bool isDead = false;
+    private Transform player;
 
     public Aim aim;
 
@@ -32,26 +29,15 @@ public class Ship3 : MonoBehaviour
 
     private void Update()
     {
-
         aim.shipAim();
         MovEnemy();
 
-        if (hp == 0 && !isDead)
-        {
-            //Die();
-        }
     }
 
-    public void RecibirDanio()
-    {
-        hp -= 1;
-
-    }
+   
 
     private void MovEnemy()
     {
-        if (hp > 0)
-        {
             if (!playerDetectado)
             {
                 // Comprueba si el jugador está dentro del radio de detección
@@ -77,7 +63,7 @@ public class Ship3 : MonoBehaviour
                 // Mueve al enemigo hacia la posición del jugador
                 transform.position = Vector3.MoveTowards(transform.position, playerPosition, moveSpeed * Time.deltaTime);
             }
-        }
+        
     }
 
     void OnDrawGizmosSelected()

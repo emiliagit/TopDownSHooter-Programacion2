@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7025573405965534056}
   - component: {fileID: 3939660245929083742}
   - component: {fileID: 5882326944598659871}
+  - component: {fileID: 5984353982742297686}
   m_Layer: 0
   m_Name: Ship3
   m_TagString: Untagged
@@ -50,7 +51,7 @@ MonoBehaviour:
   radio: 8
   moveSpeed: 2
   hp: 10
-  player: {fileID: 0}
+  player: {fileID: 6227477604433178588, guid: 403738edfeee8a2479957bd3de9d35cf, type: 3}
   aim: {fileID: 3939660245929083742}
 --- !u!114 &3939660245929083742
 MonoBehaviour:
@@ -64,7 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bef17f6b2a9a005488acc697989aeff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 6227477604433178588, guid: 403738edfeee8a2479957bd3de9d35cf, type: 3}
   ship: {fileID: 9157863357746100584}
   rotationSpeed: 5
 --- !u!61 &5882326944598659871
@@ -96,7 +97,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0010912418, y: -0.01091212}
@@ -112,6 +113,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7922215, y: 0.8690542}
   m_EdgeRadius: 0
+--- !u!114 &5984353982742297686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3034942147950993611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc0ae95a9e245e45b4b1641e48005bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Explosion: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
+  hp: 10
 --- !u!1 &5547788274683374054
 GameObject:
   m_ObjectHideFlags: 0
