@@ -242,7 +242,7 @@ MonoBehaviour:
   projectileSpawnPoint: {fileID: 7207448116305081493}
   fireRate: 0.5
   bulletForce: 3
-  detectionRadius: 5
+  detectionRadius: 6
 --- !u!114 &766701287628935082
 MonoBehaviour:
   m_ObjectHideFlags: 0
