@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    float movementSpeed = 10f;
+    public float movementSpeed = 10f;
 
     private Rigidbody2D rb;
     private float minX, maxX, minY, maxY;
