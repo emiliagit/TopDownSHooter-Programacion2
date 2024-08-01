@@ -8,10 +8,7 @@ public class Helath : MonoBehaviour
 {
     public Slider healthSlider;
 
-
     public float hp;
-
-    private float maxHealth = 100;
 
     private void Start()
     {
